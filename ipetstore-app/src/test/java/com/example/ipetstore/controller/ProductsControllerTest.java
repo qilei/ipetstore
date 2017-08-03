@@ -4,7 +4,7 @@ import static org.mockito.Mockito.when;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
-import com.example.ipetstore.domain.ProductCatalog;
+import com.example.ipetstore.domain.product.ProductCatalog;
 import com.google.common.collect.Lists;
 import org.junit.Before;
 import org.junit.Rule;

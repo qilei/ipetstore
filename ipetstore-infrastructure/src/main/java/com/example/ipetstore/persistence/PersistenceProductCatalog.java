@@ -1,7 +1,7 @@
 package com.example.ipetstore.persistence;
 
-import com.example.ipetstore.domain.Product;
-import com.example.ipetstore.domain.ProductCatalog;
+import com.example.ipetstore.domain.product.Product;
+import com.example.ipetstore.domain.product.ProductCatalog;
 import java.util.List;
 import java.util.Optional;
 import org.apache.ibatis.session.SqlSession;

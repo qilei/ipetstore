@@ -3,7 +3,7 @@ package support.com.example.ipetstore.web;
 import static org.assertj.core.api.Assertions.assertThat;
 import static test.support.com.example.ipetstore.builders.ProductBuilder.aProduct;
 
-import com.example.ipetstore.domain.Product;
+import com.example.ipetstore.domain.product.Product;
 import java.net.MalformedURLException;
 import java.util.Arrays;
 import java.util.List;

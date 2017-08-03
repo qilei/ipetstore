@@ -1,7 +1,7 @@
 package com.example.ipetstore.controller;
 
-import com.example.ipetstore.domain.Product;
-import com.example.ipetstore.domain.ProductCatalog;
+import com.example.ipetstore.domain.product.Product;
+import com.example.ipetstore.domain.product.ProductCatalog;
 import java.util.List;
 import javax.servlet.http.HttpServletResponse;
 import javax.validation.Valid;

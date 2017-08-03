@@ -1,6 +1,7 @@
-package com.example.ipetstore.domain;
+package com.example.ipetstore.domain.product;
 
 import java.io.Serializable;
+import javax.validation.constraints.NotNull;
 
 public class Product implements Serializable {
 
@@ -10,11 +11,12 @@ public class Product implements Serializable {
 
   private String number;
 
+  @NotNull
   private String name;
 
   private String description;
 
-  private String photoFileName;
+  private Attachment photo;
 
   public Product() {
   }
@@ -84,11 +86,11 @@ public class Product implements Serializable {
     this.description = description;
   }
 
-  public String getPhotoFileName() {
-    return photoFileName;
+  public Attachment getPhoto() {
+    return photo;
   }
 
-  public void setPhotoFileName(String photoFileName) {
-    this.photoFileName = photoFileName;
+  public void setPhoto(Attachment photo) {
+    this.photo = photo;
   }
 }

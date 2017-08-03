@@ -5,7 +5,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 import static test.support.com.example.ipetstore.builders.ProductBuilder.aProduct;
 
 import com.example.ipetstore.IpetstoreApp;
-import com.example.ipetstore.domain.Product;
+import com.example.ipetstore.domain.product.Product;
 import java.io.IOException;
 import java.util.List;
 import org.junit.After;

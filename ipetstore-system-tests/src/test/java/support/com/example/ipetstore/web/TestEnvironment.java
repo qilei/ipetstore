@@ -1,6 +1,6 @@
 package support.com.example.ipetstore.web;
 
-import com.example.ipetstore.domain.ProductCatalog;
+import com.example.ipetstore.domain.product.ProductCatalog;
 import org.springframework.boot.test.web.client.TestRestTemplate;
 import org.springframework.context.ApplicationContext;
 import test.support.com.example.ipetstore.db.Database;

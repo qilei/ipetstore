@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.example.ipetstore.mapper.ProductMapper" >
-  <resultMap id="BaseResultMap" type="com.example.ipetstore.domain.Product" >
+  <resultMap id="BaseResultMap" type="com.example.ipetstore.domain.product.Product" >
     <id column="id" property="id" jdbcType="BIGINT" />
     <result column="name" property="name" jdbcType="VARCHAR" />
     <result column="description" property="description" jdbcType="LONGVARCHAR" />
-    <result column="photo_file_name" property="photoFileName" jdbcType="VARCHAR" />
     <result column="number" property="number" jdbcType="VARCHAR" />
+    <result column="photo_file_name" property="photo" typeHandler="com.example.ipetstore.persistence.typehandler.AttachmentTypeHandler"/>
   </resultMap>
   <sql id="Base_Column_List" >
     id, name, description, photo_file_name, number
@@ -21,13 +21,13 @@
     delete from products
     where id = #{id,jdbcType=BIGINT}
   </delete>
-  <insert id="insert" parameterType="com.example.ipetstore.domain.Product" >
+  <insert id="insert" parameterType="com.example.ipetstore.domain.product.Product" >
     insert into products (id, name, description, 
       photo_file_name, number)
     values (#{id,jdbcType=BIGINT}, #{name,jdbcType=VARCHAR}, #{description,jdbcType=LONGVARCHAR}, 
-      #{photoFileName,jdbcType=VARCHAR}, #{number,jdbcType=VARCHAR})
+      #{photo,typeHandler=com.example.ipetstore.persistence.typehandler.AttachmentTypeHandler}, #{number,jdbcType=VARCHAR})
   </insert>
-  <insert id="insertSelective" parameterType="com.example.ipetstore.domain.Product" >
+  <insert id="insertSelective" parameterType="com.example.ipetstore.domain.product.Product" >
     insert into products
     <trim prefix="(" suffix=")" suffixOverrides="," >
       <if test="id != null" >
@@ -64,7 +64,7 @@
       </if>
     </trim>
   </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="com.example.ipetstore.domain.Product" >
+  <update id="updateByPrimaryKeySelective" parameterType="com.example.ipetstore.domain.product.Product" >
     update products
     <set >
       <if test="name != null" >
@@ -82,7 +82,7 @@
     </set>
     where id = #{id,jdbcType=BIGINT}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.example.ipetstore.domain.Product" >
+  <update id="updateByPrimaryKey" parameterType="com.example.ipetstore.domain.product.Product" >
     update products
     set name = #{name,jdbcType=VARCHAR},
       description = #{description,jdbcType=LONGVARCHAR},

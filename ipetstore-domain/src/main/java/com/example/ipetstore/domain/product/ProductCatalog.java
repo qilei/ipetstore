@@ -1,4 +1,4 @@
-package com.example.ipetstore.domain;
+package com.example.ipetstore.domain.product;
 
 import java.util.List;
 import java.util.Optional;

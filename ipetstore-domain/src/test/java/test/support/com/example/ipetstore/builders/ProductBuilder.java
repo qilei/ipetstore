@@ -3,7 +3,8 @@ package test.support.com.example.ipetstore.builders;
 
 import static test.support.com.example.ipetstore.builders.ProductNumberFaker.aProductNumber;
 
-import com.example.ipetstore.domain.Product;
+import com.example.ipetstore.domain.product.Attachment;
+import com.example.ipetstore.domain.product.Product;
 
 public class ProductBuilder implements Builder<Product> {
 
@@ -11,7 +12,7 @@ public class ProductBuilder implements Builder<Product> {
     private String number = aProductNumber();
     private String name = DEFAULT_NAME;
     private String description;
-    private String photo;
+    private Attachment photo;
 
     public static ProductBuilder aProduct() {
         return new ProductBuilder();
@@ -40,7 +41,7 @@ public class ProductBuilder implements Builder<Product> {
     }
 
     public ProductBuilder withPhoto(String name) {
-		this.photo = name;
+		this.photo = new Attachment(name);
 		return this;
 	}
 
@@ -62,7 +63,7 @@ public class ProductBuilder implements Builder<Product> {
     public Product build() {
         Product product = new Product(number, name);
         product.setDescription(description);
-        product.setPhotoFileName(photo);
+        product.setPhoto(photo);
         return product;
     }
 }

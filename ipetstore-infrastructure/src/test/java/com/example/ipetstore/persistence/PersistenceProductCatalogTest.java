@@ -3,8 +3,8 @@ package com.example.ipetstore.persistence;
 import static org.assertj.core.api.Assertions.assertThat;
 import static test.support.com.example.ipetstore.builders.ProductBuilder.aProduct;
 
-import com.example.ipetstore.domain.Product;
-import com.example.ipetstore.domain.ProductCatalog;
+import com.example.ipetstore.domain.product.Product;
+import com.example.ipetstore.domain.product.ProductCatalog;
 import java.util.Collection;
 import java.util.List;
 import java.util.Optional;

@@ -1,6 +1,6 @@
 package test.support.com.example.ipetstore.db;
 
-import com.example.ipetstore.domain.ProductCatalog;
+import com.example.ipetstore.domain.product.ProductCatalog;
 
 /**
  * Created by qilei on 17/7/30.

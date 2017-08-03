@@ -1,6 +1,6 @@
 package support.com.example.ipetstore.web;
 
-import com.example.ipetstore.domain.Product;
+import com.example.ipetstore.domain.product.Product;
 import java.io.IOException;
 import java.util.List;
 
